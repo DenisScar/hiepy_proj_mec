@@ -43,6 +43,7 @@ nav a {
     border: 0.05rem solid #CDCDCD;
     padding: 0.5rem;
     background-color: #E6E6DB;
+    transition: 0.25s;
 }
 
 .logo:hover {
@@ -50,7 +51,7 @@ nav a {
 }
 
 ul {
-    padding: 10px;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -67,5 +68,108 @@ li a:hover {
     color: #7D7E7F;
 }
 
+.slider {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    width: 50rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 25rem;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 50rem;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 50rem;
+    margin-top: -2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #000;
+    padding: 0.25rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.manual-btn:hover {
+    background-color: #000;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20A6FF;
+    padding: 0.25rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 50rem;
+    margin-top: 22.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #000;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #000;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #000;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #000;
+}
 
 
